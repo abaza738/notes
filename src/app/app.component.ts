@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'notes';
+  links: any[] = [
+    {
+      icon: 'dashboard.svg',
+      label: 'Dashboard',
+      link: 'dashboard'
+    },
+    {
+      icon: 'icon.svg',
+      label: 'Notes',
+      link: 'notes'
+    }
+  ];
 }

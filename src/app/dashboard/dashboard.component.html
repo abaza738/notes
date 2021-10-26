@@ -1,0 +1,20 @@
+<div class="col container">
+    
+    <h1>Dashboard</h1>
+   
+    <div class="chart">
+        <ngx-charts-advanced-pie-chart
+        [results]="notes"
+        [view]="[800, 300]">
+        </ngx-charts-advanced-pie-chart>
+    </div>
+
+    <div class="chart">
+        <ngx-charts-pie-grid
+        [results]="notes"
+        [view]="[1200, 300]"
+        [scheme]="scheme">
+        </ngx-charts-pie-grid>
+    </div>
+
+</div>

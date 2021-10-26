@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>My Notes!</h1>
+    <div class="notes">
+        <ng-container *ngFor="let note of notes">
+            <app-note [note]="note"></app-note>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+.note {
+    cursor: pointer;
+    display: grid;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--tone-2);
+}
+
+.note:hover {
+    background-color: var(--tone-3);
+}
+
+.note .header,
+.note .content,
+.note .content .file-info,
+.note .footer {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.note .content .file-info {
+    font-family: 'Consolas';
+}
+
+.note .content .file-info .file {
+    color: rgb(100, 150, 225);
+}
+
+.note .content .file-info .line {
+    color: rgb(225, 150, 100);
+}
+
+.note .content .description {
+    text-align: left;
+}
+
+.note .footer {
+    color: var(--tone-5);
+    font-family: 'Consolas';
+    align-self: flex-end;
+}
