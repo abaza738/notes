@@ -1,13 +1,24 @@
+<mat-toolbar>
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Menu</span>
+  <span class="example-spacer"></span>
+  <button mat-button>
+    <mat-icon>person</mat-icon> Login
+  </button>
+</mat-toolbar>
 <mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side" opened [fixedInViewport]="true">
-      <div class="side-nav-header">
-        <h4>My Notes!</h4>
-      </div>
-      <a class="row side-nav-item" *ngFor="let item of links" [routerLink]="item.link">
-        <span class="label">{{ item.label }}</span>
-      </a>
-    </mat-sidenav>
-    <mat-sidenav-content>
+  <mat-sidenav #sidenav mode="side" [fixedInViewport]="true" [fixedTopGap]="64">
+    <div class="side-nav-header">
+      <h4>My Notes!</h4>
+    </div>
+    <a class="row side-nav-item" *ngFor="let item of links" [routerLink]="item.link">
+      <mat-icon class="material-icons-outlined">{{ item.icon }}</mat-icon>
+      <span class="label">{{ item.label }}</span>
+    </a>
+  </mat-sidenav>
+  <mat-sidenav-content>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>

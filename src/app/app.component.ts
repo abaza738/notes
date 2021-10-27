@@ -10,12 +10,12 @@ export class AppComponent {
   title = 'notes';
   links: any[] = [
     {
-      icon: 'dashboard.svg',
+      icon: 'dashboard',
       label: 'Dashboard',
       link: 'dashboard'
     },
     {
-      icon: 'icon.svg',
+      icon: 'sticky_note_2',
       label: 'Notes',
       link: 'notes'
     }
