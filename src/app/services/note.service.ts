@@ -30,3 +30,11 @@ export class NoteService {
   };
   
 }
+
+export const StatusIcons: {[index: string]: any} = {
+  'bug': 'bug_report',
+  'task': 'circle',
+  'solved': 'check_circle',
+  'on-hold': 'hourglass_top',
+  'deferred': 'forward'
+}

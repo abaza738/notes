@@ -1,47 +1,75 @@
 .note {
-    cursor: pointer;
-    display: grid;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: var(--tone-2);
-    width: 100%;
+  cursor: pointer;
+  display: grid;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--tone-2);
+  width: 100%;
 }
 
 .note:hover {
-    background-color: var(--tone-3);
+  background-color: var(--tone-3);
 }
 
-.note .header,
+.note.done * {
+  color: var(--tone-4);
+}
+
+.note .header {
+  text-align: start;
+}
+
+.note .header .mat-icon {
+  font-size: 2rem;
+}
+
 .note .content,
 .note .content .file-info,
 .note .footer {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .note .content .content-wrapper {
-    width: 100%;
+  width: 100%;
 }
 
 .note .content .file-info {
-    font-family: 'Consolas';
+  font-family: "Consolas";
 }
 
-.note .content .file-info .file {
-    color: rgb(100, 150, 225);
+.file {
+  color: rgb(100, 150, 225);
 }
 
-.note .content .file-info .line {
-    color: rgb(225, 150, 100);
+.line {
+  color: rgb(225, 150, 100);
 }
 
 .note .content .description {
-    text-align: left;
+  text-align: left;
 }
 
 .note .footer {
-    color: var(--tone-5);
-    font-family: 'Consolas';
-    align-self: flex-end;
+  color: var(--tone-5);
+  font-family: "Consolas";
+  align-self: flex-end;
+}
+
+.bug {
+  color: rgb(22, 104, 43);
+}
+
+.solved {
+  color: rgb(6, 177, 6);
+}
+
+.task {
+  color: rgb(71, 135, 255);
+}
+
+.on-hold,
+.deferred {
+  color: var(--tone-4);
 }

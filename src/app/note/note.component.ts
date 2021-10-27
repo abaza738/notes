@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Note } from '../models/note';
+import { StatusIcons } from '../services/note.service';
 
 @Component({
   selector: 'app-note',
@@ -8,11 +9,15 @@ import { Note } from '../models/note';
 })
 export class NoteComponent implements OnInit {
 
+  icon: any = '';
+
   @Input() note: any;
 
-  constructor() { }
-
+  constructor() {
+  }
+  
   ngOnInit(): void {
+    this.icon = StatusIcons[this.note.status];
   }
 
 }

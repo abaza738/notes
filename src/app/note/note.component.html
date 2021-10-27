@@ -1,5 +1,6 @@
-<div class="col note">
+<div class="col note" [ngClass]="{ done: ['solved', 'deferred', 'on-hold'].includes(note.status) }">
     <div class="row header">
+        <mat-icon class="material-icons-outlined" [class]="note.status">{{ icon }}</mat-icon>
         <h6>{{ note.title }}</h6>
     </div>
     <div class="row content">
