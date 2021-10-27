@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
 
 :root {
   --tone-1: #002029;
@@ -9,6 +10,7 @@
   --tone-5: #00607A;
   --tone-6: #007fa2;
   --tone-7: #56a5bb;
+  --tone-8: #9be4f8;
 }
 
 * {
@@ -17,7 +19,12 @@
   transition: 200ms;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
   box-sizing: border-box;
   min-height: 100vh;
@@ -33,7 +40,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 1rem 2rem;
+  margin: 0;
+  padding: 0.25rem 1rem;
   font-family: 'Quicksand';
   color: var(--tone-7);
 }
@@ -88,4 +96,30 @@ code {
   background-color: #00171d;
   padding: 0.1rem 0.3rem;
   border-radius: 0.3rem;
+}
+
+.mat-toolbar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.mat-icon {
+  margin: 0.5rem;
+}
+
+button.mat-button {
+  font-family: 'Ubuntu';
+  padding: 0.25rem 1rem;
+}
+
+button.mat-button.mat-primary {
+  background-color: var(--tone-3);
+  color: white;
+}
+
+button.mat-stroked-button {
+  background-color: transparent;
+  border: 0.25rem solid rgba(255, 255, 255, 0.5) !important;
 }
